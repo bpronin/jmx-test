@@ -10,25 +10,26 @@ import org.springframework.jmx.export.annotation.ManagedResource;
  * @author Boris Pronin (<a href="mailto:bpronin@bttprime.com">bpronin@bttprime.com</a>)
  */
 @ManagedResource
-public class Controller extends BaseController {
+public class BaseController extends AbstractController {
 
-    private boolean enabled;
+    private String parameter;
 
-    public Controller() {
+    public BaseController() {
     }
 
     @ManagedAttribute
-    public boolean isEnabled() {
-        return enabled;
+    public String getParameter() {
+        return parameter;
     }
 
     @ManagedAttribute
-    public void setEnabled(boolean enabled) {
-        this.enabled = enabled;
+    public void setParameter(String parameter) {
+        this.parameter = parameter;
     }
 
     @ManagedOperation
-    public String echo(String text) {
-        return text;
+    public String show() {
+        return parameter;
     }
+
 }

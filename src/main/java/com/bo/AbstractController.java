@@ -8,7 +8,7 @@ import org.springframework.jmx.export.annotation.ManagedResource;
  *
  * @author Boris Pronin (<a href="mailto:bpronin@bttprime.com">bpronin@bttprime.com</a>)
  */
-@ManagedResource
+//@ManagedResource
 public class AbstractController {
 
     private int interval;
@@ -16,12 +16,12 @@ public class AbstractController {
     public AbstractController() {
     }
 
-    @ManagedAttribute
+//    @ManagedAttribute
     public int getInterval() {
         return interval;
     }
 
-    @ManagedAttribute
+//    @ManagedAttribute
     public void setInterval(int interval) {
         this.interval = interval;
     }
